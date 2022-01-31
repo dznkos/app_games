@@ -2,6 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:games_app/components/widgets/search_bar.dart';
+import 'package:get/get.dart';
 
 final List<String> imgList = [
   'https://stealthoptional.com/wp-content/uploads/2021/08/metaimage1-1920x1080-abb60090deaf.png',
@@ -97,80 +99,9 @@ class Body extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Container(
-                      width: 0.95.sw,
-                      height: 80,
-                      child: Padding(
-                        padding: EdgeInsets.all(10),
-                        child: new Card(
-                          color: Colors.transparent,
-                          child: ListTile(
-                            tileColor: Colors.transparent,
-                            leading: IconButton(
-                              splashColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              icon: Icon(
-                                Icons.search,
-                                size: 30,
-                              ),
-                              onPressed: () {
-                                print('search');
-                              },
-                              color: Colors.white54,
-                            ),
-                            title: Material(
-                              color: Colors.transparent,
-                              child: TextField(
-                                style: TextStyle(color: Colors.white),
-                                //autofocus: true,
-                                decoration: InputDecoration(
-                                    hintText: 'Search library...',
-                                    hintStyle: TextStyle(color: Colors.white54),
-                                    border: InputBorder.none),
-                              ),
-                            ),
-                            trailing: new IconButton(
-                                splashColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                icon: Icon(
-                                  Icons.cancel,
-                                  color: Colors.white,
-                                ),
-                                onPressed: () {
-                                  print('Cancel');
-                                }),
-                          ),
-                        ),
-                      ),
-                    ),
+                    SearchBar(),
                     //CARD Install
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-                      width: 0.9.sw,
-                      //height: 120,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Color(0xFF1B1D2C),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Try for free',
-                              style: Theme.of(context).textTheme.headline2),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Text('Dragon saga',
-                              style: Theme.of(context).textTheme.headline3
-                          ),
-                          SizedBox(
-                            height: 25,
-                          ),
-                          ButtonInstall()
-                        ],
-                      ),
-                    ),
+                    CardPrincipal(),
                     Container(
                       padding:
                           EdgeInsets.symmetric(horizontal: 30, vertical: 10),
@@ -388,6 +319,45 @@ class Body extends StatelessWidget {
   }
 }
 
+class CardPrincipal extends StatelessWidget {
+  const CardPrincipal({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding:
+          EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+      width: 0.9.sw,
+      //height: 120,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25),
+        color: Color(0xFF1B1D2C),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('Try for free',
+              style: Theme.of(context).textTheme.headline2),
+          SizedBox(
+            height: 8,
+          ),
+          Text('Dragon saga',
+              style: Theme.of(context).textTheme.headline3
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          ButtonInstall()
+        ],
+      ),
+    );
+  }
+}
+
+
+
 Widget ButtonInstall() {
   return Container(
     width: 90,
@@ -404,7 +374,9 @@ Widget ButtonInstall() {
         color: Colors.transparent,
         child: InkWell(
           borderRadius: BorderRadius.circular(25),
-          onTap: () {},
+          onTap: () {
+            Get.toNamed('/gamelist');
+          },
           child: Center(
               child: Text(
             'Install',

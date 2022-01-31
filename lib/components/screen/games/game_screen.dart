@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:games_app/components/screen/games/game_body.dart';
 
-import 'body.dart';
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({ Key? key }) : super(key: key);
+class GameListPage extends StatelessWidget {
+  const GameListPage({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
+    
     LinearGradient _gradient = 
       LinearGradient(
         colors: [
@@ -21,14 +20,13 @@ class HomeScreen extends StatelessWidget {
        tileMode: TileMode.clamp
    );
 
-    return Scaffold(
-      
+    return Scaffold(      
       body: Container(
         decoration: BoxDecoration(
           gradient: _gradient
         ),
-        child: Body()),
-      
-    );
+        child: GamesBody()),
+    );  
+    
   }
 }

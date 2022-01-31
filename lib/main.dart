@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:games_app/components/screen/games/game_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'components/screen/games/game_detail.dart';
 import 'components/screen/home/components/home_screen.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
 
     
     return ScreenUtilInit(
-      builder: () => MaterialApp(        
+      builder: () => GetMaterialApp(        
         debugShowCheckedModeBanner: false,
         builder: (context, widget){
           ScreenUtil.setContext(context);
@@ -54,7 +57,14 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Color(0xFF044386),
           primarySwatch: Colors.blue,
         ),
-        home: HomeScreen(),
+        home: GameDetail(),
+        getPages: [
+        GetPage(name: '/', page: () => const HomeScreen()),
+        GetPage(name: '/gamelist', page: () => const GameListPage()),
+        // GetPage(
+        //     name: '/page-four/:data',
+        //     page: () => const PageFour()) // Dynamic route
+      ],
       ),
       designSize: const Size(360, 640),
     );
