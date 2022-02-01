@@ -16,17 +16,16 @@ Consumir API y mostrar games
 ###### API using :
 ###### https://rapidapi.com/digiwalls/api/free-to-play-games-database
 
-> Views Design <br>
+## Views Design 
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/31463345/152004339-c55ba1d2-ed9d-427f-9bb0-9dbe2573bf6a.gif)
 
 
-> Views Design + API free-to-play-games-database <br>
-![gif_app_games](https://user-images.githubusercontent.com/31463345/152004178-9e54c466-3775-491a-bccd-dd5b3ce828e6.gif)
+## Views Design + API free-to-play-games-database
 ![view3_1](https://user-images.githubusercontent.com/31463345/152004409-6a2d9999-0897-4691-a38b-adc1f4aded01.gif)
 ![view3_2](https://user-images.githubusercontent.com/31463345/152004422-5ebb1850-42f5-4f0a-88e5-8c08ec429089.gif)
 ![view3_3](https://user-images.githubusercontent.com/31463345/152004432-9209c57b-78e3-4004-9946-ce271ad4feea.gif)
 
-> Design Base <br>
+## Design Base 
 ![desingbase](https://user-images.githubusercontent.com/31463345/152004586-945aa906-8468-4cb7-a8e8-15820675f401.jpeg)
 
 
