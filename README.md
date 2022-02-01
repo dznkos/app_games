@@ -17,6 +17,7 @@ Consumir API y mostrar games
 ###### https://rapidapi.com/digiwalls/api/free-to-play-games-database
 
 ## Views Design 
+![gif_app2_games](https://user-images.githubusercontent.com/31463345/152005086-61f1fd36-c82d-4bfd-a236-dad6e69aeb16.gif)
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/31463345/152004339-c55ba1d2-ed9d-427f-9bb0-9dbe2573bf6a.gif)
 
 
