@@ -5,7 +5,7 @@
 - [x] GetX Routes
 
 > Objetivo Proyecto
-- [x] Clonar diseño de App Games 
+- [x] Clonar diseño
 - [x] Usar Diseño y Consumir API 
 - [x] GetX Routes
 
