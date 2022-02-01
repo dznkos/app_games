@@ -1,8 +1,13 @@
 # games_app
-- Clone Design <br>
-- Clonar diseño de App Games <br>
-- Usar Diseño y Consumir API <br>
-- GetX Routes
+> Project purpose
+- [x] Clone Design 
+- [x] Use Design and Consume API
+- [x] GetX Routes
+
+> Objetivo Proyecto
+- [x] Clonar diseño de App Games 
+- [x] Usar Diseño y Consumir API 
+- [x] GetX Routes
 
 > Instalar Dependencies: <br>
   - cupertino_icons: ^1.0.2<br>
