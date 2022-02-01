@@ -1,7 +1,8 @@
 # games_app
-> Clone Design <br>
-Clonar diseño de App Games
-Consumir API y mostrar games
+- Clone Design <br>
+- Clonar diseño de App Games <br>
+- Usar Diseño y Consumir API <br>
+- GetX Routes
 
 > Instalar Dependencies: <br>
   - cupertino_icons: ^1.0.2<br>
@@ -12,7 +13,8 @@ Consumir API y mostrar games
   - get: ^4.6.1<br>
   - http: ^0.13.4<br>
   - cached_network_image: ^3.2.0<br>
-  - 
+  
+  
 ###### API using :
 ###### https://rapidapi.com/digiwalls/api/free-to-play-games-database
 
