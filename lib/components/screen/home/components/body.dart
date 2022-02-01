@@ -107,9 +107,27 @@ class Body extends StatelessWidget {
                           EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                       width: double.infinity,
                       //color: Colors.red,
-                      child: Text(
-                        'Your games',
-                        style: Theme.of(context).textTheme.headline1,
+                      child: Row(
+                        children: [
+                          Text(
+                            'Your games',
+                            style: Theme.of(context).textTheme.headline1,
+                          ),
+                          Material(
+                            //type: MaterialType.transparency,
+                            color: Colors.transparent,
+                            child: IconButton(
+                              highlightColor: Colors.blue,
+                              splashColor: Colors.blueGrey,
+                              splashRadius: 20,
+                              onPressed: (){
+                                Get.toNamed('/gamelist');
+                              },
+                              icon: Icon(Icons.arrow_forward_outlined, color: Color(0xFFd1d1d1),
+                              )
+                            ),
+                          )
+                        ],
                       ),
                     ),
                   ],
@@ -375,7 +393,7 @@ Widget ButtonInstall() {
         child: InkWell(
           borderRadius: BorderRadius.circular(25),
           onTap: () {
-            Get.toNamed('/gamelist');
+            //Get.toNamed('/gamelist');
           },
           child: Center(
               child: Text(

@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:games_app/components/models/game.dart';
+import 'package:games_app/components/screen/games/game_detail.dart';
 import 'package:games_app/components/widgets/search_bar.dart';
+import 'package:get/get.dart';
 
 import 'package:http/http.dart' as http;
 
@@ -63,9 +65,11 @@ class _GamesBodyState extends State<GamesBody> {
               //  if (item["id"] == 10) {
               //    break;
               //  }              
-               games.add(Game(item["title"], item["thumbnail"]));
+               games.add(Game.fromJson(item));
              }
-             //print(listGame[0].url);
+             print(games[0].title);
+             print(games[0].thumbnail);
+             print(games[0].releaseDate);
 
             return games;
 
@@ -170,42 +174,46 @@ List<Widget> _listG(List<Game> data) {
         width: 0.42.sw,
         child: GestureDetector(
           onTap: (){
-            print('game tap');
+            Get.to(GameDetail(itemGame: item));
+            //print(item.thumbnail);
           },
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: 
-            // Image(                  
-                    // image: 
-                    CachedNetworkImage(
-                        imageUrl: item.url.toString(),
-                        placeholder: (context, url) => CircularProgressIndicator(),
-                        errorWidget: (context, url, error) => Icon(Icons.error),
-                    ),
-              //             Image.network( item.url.toString(),
-              //             errorBuilder:
-              //               (BuildContext context, 
-              //               Object exception, 
-              //                 StackTrace? stackTrace) { 
-              //               print(item.url.toString());             
-              //               return Container();
-              //             },
-              // ),
-                    // loadingBuilder: (
-                    //   BuildContext context,
-                    //   Widget wiget,
-                    //   ImageChunkEvent? loadingProgress){
-                    //     if (loadingProgress == null) return wiget;
-                    //       return Center(
-                    //         child: CircularProgressIndicator(
-                    //           value: loadingProgress.expectedTotalBytes != null
-                    //           ? loadingProgress.cumulativeBytesLoaded /
-                    //             loadingProgress.expectedTotalBytes!
-                    //           : null,
-                    //         ),
-                    //       );
-                    // },
-           
+          child: Hero(
+            tag: item.id,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: 
+              // Image(                  
+                      // image: 
+                      CachedNetworkImage(
+                          imageUrl: item.thumbnail.toString(),
+                          placeholder: (context, url) => CircularProgressIndicator(),
+                          errorWidget: (context, url, error) => Icon(Icons.error),
+                      ),
+                      // Image.network( item.thumbnail.toString(),
+                      //   errorBuilder:
+                      //     (BuildContext context, 
+                      //     Object exception, 
+                      //       StackTrace? stackTrace) { 
+                      //     print(item.thumbnail.toString());             
+                      //     return Container();
+                      //   },
+                      // ),
+                      // loadingBuilder: (
+                      //   BuildContext context,
+                      //   Widget wiget,
+                      //   ImageChunkEvent? loadingProgress){
+                      //     if (loadingProgress == null) return wiget;
+                      //       return Center(
+                      //         child: CircularProgressIndicator(
+                      //           value: loadingProgress.expectedTotalBytes != null
+                      //           ? loadingProgress.cumulativeBytesLoaded /
+                      //             loadingProgress.expectedTotalBytes!
+                      //           : null,
+                      //         ),
+                      //       );
+                      // },
+             
+            ),
           ),
         ),
       )
@@ -233,7 +241,9 @@ class CustomBar extends StatelessWidget {
             child: Material(
               color: Colors.transparent,
               child: InkWell(
-                onTap: (){},
+                onTap: (){
+                  Navigator.pop(context);
+                },
                 splashColor: Colors.black,
                 child: SizedBox(
                   width: 30,

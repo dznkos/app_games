@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Color(0xFF044386),
           primarySwatch: Colors.blue,
         ),
-        home: GameDetail(),
+        home: HomeScreen(),
         getPages: [
         GetPage(name: '/', page: () => const HomeScreen()),
         GetPage(name: '/gamelist', page: () => const GameListPage()),
