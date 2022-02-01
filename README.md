@@ -26,6 +26,7 @@
 ## Views Design 
 ![gif_app2_games](https://user-images.githubusercontent.com/31463345/152005086-61f1fd36-c82d-4bfd-a236-dad6e69aeb16.gif)
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/31463345/152004339-c55ba1d2-ed9d-427f-9bb0-9dbe2573bf6a.gif)
+![view2_1](https://user-images.githubusercontent.com/31463345/152070697-d7406682-1117-4dc2-9126-2cb66931b5de.gif)
 
 
 ## Views Design + API free-to-play-games-database
